@@ -1,3 +1,0 @@
-Riftwalker: Main Player
-Voidspawn: Types of Enemies
-Synths: Other NPCs
