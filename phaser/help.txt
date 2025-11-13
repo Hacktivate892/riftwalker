@@ -1,0 +1,64 @@
+HELP: Loading JavaScript Files with <script> Tag
+-----------------------------------------------
+
+1. Basic Usage:
+
+To use a JavaScript file in your HTML, add a <script> tag in your HTML file like this:
+
+    <script src="js/game.js"></script>
+
+- `src` specifies the path to your JavaScript file.
+- The path can be relative or absolute.
+- The file will be executed in the order it appears in the HTML.
+
+---
+
+2. Folder Structure:
+
+If your project has folders, make sure the path matches the file location. Example:
+
+my-game/
+├─ index.html
+├─ js/
+│   ├─ game.js
+│   └─ scene1.js
+├─ libs/
+│   └─ phaser.min.js
+
+HTML example:
+
+    <!-- Load Phaser library -->
+    <script src="libs/phaser.min.js"></script>
+
+    <!-- Load your game code -->
+    <script src="js/game.js"></script>
+    <script src="js/scene1.js"></script>
+
+---
+
+3. Order Matters:
+
+- Scripts are executed in the order they appear.
+- If `scene1.js` uses something from `game.js`, `game.js` must be loaded first.
+
+---
+
+4. Inline Scripts:
+
+You can also write JavaScript directly in the HTML without a separate file:
+
+    <script>
+        console.log("Hello, Phaser!");
+    </script>
+
+- Useful for quick testing.
+- For larger projects, keep code in separate `.js` files for organization.
+
+---
+
+5. Notes:
+
+- Paths are case-sensitive on most servers.
+- Using multiple JS files allows you to organize your game code (scenes, utilities, etc.).
+- Always test your HTML locally to ensure the paths are correct.
+
